@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent {
+  nomePortal: string
+  cursos: string[] = ['Java', 'Ext Js', 'Angular']
 
+  constructor(){
+    this.nomePortal = "https://youtube.com"
+  }
 }
