@@ -12,7 +12,7 @@ export class OutputPropertyComponent {
 
   incrementa(){
     this.valor++
-    this.mudouValor.emit({ novoValor: this.valor })
+    this.mudouValor.emit({ novoValor: this.valor }) // emite um valor para o elemento pai
   }
 
   decrementa(){
