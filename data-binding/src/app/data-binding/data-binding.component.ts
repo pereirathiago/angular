@@ -10,12 +10,31 @@ export class DataBindingComponent {
   urlImage: string = 'https://cataas.com/cat'
   cursoAngular: boolean = true
 
+  valorAtual: string = ''
+  valorSalvo: string = ''
+
+  isMouseOver: boolean = false
+
   getValor() {
     return 1
   }
 
   getCurtirCurso(){
     return true
+  }
+
+  botaoClicado(){
+    alert("Botao clicado")
+  }
+  onKeyUp(evento: KeyboardEvent){
+    this.valorAtual = (<HTMLInputElement>evento.target).value
+  }
+  salvarValor(valor: string){
+    this.valorSalvo = valor
+  }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver
   }
 
 }
