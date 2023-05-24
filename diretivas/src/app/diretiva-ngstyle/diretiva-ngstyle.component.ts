@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretiva-ngstyle.component.scss']
 })
 export class DiretivaNgstyleComponent {
+  ativo: boolean = false
+  tamanhoFonte: number = 10
 
+  mudarAtivo() {
+    this.ativo = !this.ativo
+  }
 }
