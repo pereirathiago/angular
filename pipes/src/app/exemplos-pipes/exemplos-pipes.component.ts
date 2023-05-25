@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable, interval, map } from 'rxjs';
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -31,4 +32,10 @@ export class ExemplosPipesComponent {
     let filter = this.filtro.toLocaleString().toLowerCase();
     return this.livros.filter((v: string) => v.toLowerCase().includes(filter));
   }
+
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor assincrono'), 2000)
+  })
+
+  valorAsync2 = interval(2000).pipe(map(valor => 'Valor assíncrono 2'));
 }
