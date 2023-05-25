@@ -3,10 +3,9 @@ import { CursosService } from './cursos.service';
 import { CommonModule } from '@angular/common';
 import { CursosComponent } from './cursos.component';
 
-
 @NgModule({
   declarations: [
-    CursosComponent
+    CursosComponent,
   ],
   imports: [
     CommonModule
