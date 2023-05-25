@@ -22,4 +22,13 @@ export class ExemplosPipesComponent {
   addCurso(valor: string) {
     this.livros.push(valor)
   }
+
+  obterCursos() {
+    if (this.livros.length === 0 || this.filtro === undefined || this.filtro.trim() === '') {
+      return this.livros;
+    }
+
+    let filter = this.filtro.toLocaleString().toLowerCase();
+    return this.livros.filter((v: string) => v.toLowerCase().includes(filter));
+  }
 }
