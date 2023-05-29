@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routing.module';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guard/auth.guard';
 // import { CursosModule } from './cursos/cursos.module';
 // import { AlunosModule } from './alunos/alunos.module';
 // import { AlunosComponent } from './alunos/alunos.component';
@@ -34,7 +35,7 @@ import { AuthService } from './login/auth.service';
     AppRoutingModule
   ],
   // providers: [CursosService],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
