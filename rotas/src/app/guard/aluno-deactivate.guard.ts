@@ -12,6 +12,6 @@ export class AlunosDeactivateGuard implements CanDeactivate<AlunoFormComponent> 
             state: RouterStateSnapshot
         ): Observable<boolean>|Promise<boolean>|boolean {
             console.log('guarda de desativação')
-            return true
+            return component.podeMudarRota()
     }
 }
