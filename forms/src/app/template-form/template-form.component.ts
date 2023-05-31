@@ -18,8 +18,12 @@ export class TemplateFormComponent {
   constructor(private http: HttpClient) { }
 
   onSubmit(form: NgForm) {
-    console.log(form)
+    // console.log(form)
     // console.log(this.usuario)
+
+    this.http.post('https://httpbin.org/post', JSON.stringify(form.value))
+    .pipe(map(res => res))
+    .subscribe(dados => console.log(dados))
   }
 
   verificaValidTouched(campo: any) {
